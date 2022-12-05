@@ -2,13 +2,14 @@
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input second number 'b':");
 int b = Convert.ToInt32(Console.ReadLine());
+int max;
 if(a > b)
 {
-	int max = a;
+	max = a;
 	Console.WriteLine("max = {0}",max);
 }
 else
 {
-	int max = b;
+	max = b;
 	Console.WriteLine("max = {0}",max);
 }	
