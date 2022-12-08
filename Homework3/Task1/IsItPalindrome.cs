@@ -25,21 +25,30 @@ else
             frontCounter = frontCounter / 10;
             backCounter = backCounter * 10;
             countOfCompares--;
-            while (countOfCompares != 0)
+            while (true)
             {
-                if ((n / frontCounter) % (backCounter / 10) == (n % backCounter) / (backCounter / 10))
+                if ((n / frontCounter) % 10 == (n % backCounter) / (backCounter / 10))
                 {
                     frontCounter = frontCounter / 10;
                     backCounter = backCounter * 10;
                     countOfCompares--;
+                    if(countOfCompares > 0)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        Console.WriteLine("It is a palindrome!");
+                        break;    
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("This is not a palindrome!");
-                    break;
+                    Console.WriteLine("This is not a palindrome!ф");
+                    break;            
                 }
             }
-            Console.WriteLine("It is a palindrome!");
+            
         }
         else
         {
